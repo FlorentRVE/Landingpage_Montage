@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
+@theme {
+  --color-azure-50:  #f0f9ff;
+  --color-azure-100: #e0f2fe;
+  --color-azure-200: #bae6fd;
+  --color-azure-300: #7dd3fc;
+  --color-azure-400: #38bdf8;
+  --color-azure-500: #0ea5e9;
+  --color-azure-600: #0284c7;
+  --color-azure-700: #0369a1;
+  --color-azure-800: #075985;
+  --color-azure-900: #0c4a6e;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #ffffff;
+  --text: #0b1220;
+  --muted: #4b5563;
+  --border: rgba(2, 132, 199, 0.18);
+  --soft: rgba(14, 165, 233, 0.08);
+  --soft2: rgba(56, 189, 248, 0.10);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
+
+::selection {
+  background: rgba(14, 165, 233, 0.25);
+}
+
+
+
